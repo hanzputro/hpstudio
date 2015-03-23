@@ -1,0 +1,228 @@
+.menubar{
+  //display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  background:$bgabuabu3;
+  z-index: 104;
+  width:100%;
+  padding:0;
+  margin:0; 
+  @include boxshadow(130px, 15px, 5px, -14px, #111 ); 
+    .menubar--wrap{
+      margin:0 auto;
+      padding:0;
+      width:100%;
+        .menubar--wrap__logo{
+          float:left;
+          width:150px;
+          padding:15px 25px;
+          text-align:center;
+          background:$bgabuabu2;
+            img{
+                width:70px;
+                height: auto;
+            }
+        }
+        .menubar--wrap__listmenu{
+          float:right;
+          //width:140px;
+          //padding:34px 0px 0px 0px;
+          margin:0;
+            .listmenu--ul{              
+              list-style-type: none;
+              display:block;
+                .listmenu--li{
+                  float:right;                               
+                  //height:50px;
+                  margin:0px 0px 0px 0px;
+                  padding:0;
+                    a{
+                      margin:0px 0px 0px 0px;                      
+                      padding: 40px;
+                      display:block;
+                      //background:#eee;
+                        img{
+                      }
+                    }
+                    
+                }
+                .listmenu--li {  
+                    .logo-search1,
+                    .logo-contact{
+                      cursor:pointer;
+                    }              
+                    .logo-search1{
+                      position:relative;
+                      color:#000;
+                      font-weight:800;
+                      font-size:10px;
+                      display:block;                                                  
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+.searchdiv{
+  position:fixed;
+  top:0;
+  right:0;
+  z-index: 100;
+  width:100%;
+  margin:-40px 0px 0px 0px;
+  padding:0px 0px 0px 150px;
+    .searchdiv--wrap{
+      padding:20px 35px 20px 35px;
+      background:$bgabuabu6;
+      @include boxshadow(inset 0px, -15px, 5px, -14px, #111);
+      margin:0 auto;
+      width:100%;
+        img{
+          float:left;
+          padding:15px 0px 0px 0px;
+          // margin-right:30px;
+          height:auto;
+        }
+        input{
+          float:left;
+          padding:0px 0px;
+          outline: none;
+          // width:94%;
+          height:auto;
+          font-size:65px;
+          //font-family:calibri;
+          font-weight:100;
+          color:#fff;
+          text-align:left;
+          background:$bgabuabu6;
+          border-top:none;
+          border-right:none;
+          border-left:none;
+          border-bottom:1px solid $bgabuabu3;
+        }
+    }
+}
+
+.contactdiv{
+  position:fixed;
+  top:0;
+  right:0;
+  z-index:100;
+  width:100%;
+  margin:-90px 0px 0px 0px;
+  padding:0px 0px 0px 150px;  
+    .contactdiv--wrap{
+      padding:20px 35px 20px 35px;
+      background:$bgabuabu6;
+      @include boxshadow(inset 0px, -15px, 5px, -14px, #111);
+        h1{
+          margin:0px 0px 10px 0px;
+          font-size:40px;
+          font-weight:700;
+          color:$bgkuning;
+        }
+        .contactdiv__content{
+          float:left;
+          // width:29%;
+          // margin:0px 70px 0px 0px;
+          // padding:15px 5px 5px 5px;
+          border-top:1px solid $bgabuabu3;
+            .contactdiv__title{
+              font-weight:800;
+            }
+            p{
+              color:$bgabuabu2;
+              font-size: 12px;
+              margin:0;
+              line-height: 20px;
+              letter-spacing: normal;
+            }
+            // .fb-logo, .twit-logo, .pint-logo, .dribb-logo{
+            //   float:left;
+            //   margin:5px 10px 0px 0px;
+            //   width:30px;
+            //   height:30px;
+            //   @include delay(.5s);
+            // }
+            // .fb-logo{              
+            //   background:url(../images/icons/facebook.png) no-repeat;
+            //   &:hover{
+            //     background:url(../images/icons/facebook-hover.png) no-repeat;
+            //   } 
+            // }
+            // .twit-logo{
+            //   background:url(../images/icons/twitter.png) no-repeat;
+            //   &:hover{
+            //     background:url(../images/icons/twitter-hover.png) no-repeat;
+            //   } 
+            // }
+            // .pint-logo{
+            //   background:url(../images/icons/pinterest.png) no-repeat;
+            //   &:hover{
+            //     background:url(../images/icons/pinterest-hover.png) no-repeat;
+            //   } 
+            // }
+            // .dribb-logo{
+            //   background:url(../images/icons/dribble.png) no-repeat;
+            //   &:hover{
+            //     background:url(../images/icons/dribble-hover.png) no-repeat;
+            //   } 
+            // }
+        }
+    }
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+  .contactdiv__content{
+    width:29%;
+    margin:0px 32px 0px 0px;
+    padding:15px 5px 5px 5px;
+  }
+  .searchdiv--wrap{
+    img{
+      margin-right:20px;
+    }
+    input{
+      width:89%;
+    }
+  }
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1440px above)----------- */
+@media only screen
+and (min-width : 1440px) { 
+  .contactdiv__content{
+    width:29%;
+    margin:0px 50px 0px 0px;
+    padding:15px 5px 5px 5px;
+  }
+  .searchdiv--wrap{
+    img{
+      margin-right:30px;
+    }
+    input{
+      width:90%;
+    }
+  }
+}
