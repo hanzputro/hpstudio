@@ -45,7 +45,12 @@ gulp.task('sass', function () {
 gulp.task('js-plugin', function () {
     gulp.src([        
         'assets/vendor/bxslider-4/dist/jquery.bxslider.js',
-        'assets/vendor/baguetteBox/dist/baguetteBox.js'
+        'assets/vendor/baguetteBox/dist/baguetteBox.js',
+        'assets/js/component/modernizr.custom.js',
+        'assets/js/component/classie.js',
+        'assets/js/component/masonry.pkgd.min.js',
+        'assets/js/component/AnimOnScroll.js',        
+        'assets/js/component/imagesloaded.js'
     ])
     .pipe(minify({
         minify: true,
@@ -98,8 +103,8 @@ gulp.task('php', function() {
 */
 gulp.task('serve', ['sass', 'js-plugin', 'js-script'], function() {
     browserSync.init({
-        // proxy: "http://localhost/wordpress/ccw2017"
-        proxy: "lochp.com"
+        proxy: "http://localhost/wordpress/hanifputra"
+        // proxy: "lochp.com"
     });
     gulp.watch(['assets/sass/*/**.scss'], ['sass']);
     gulp.watch('assets/js/*.js', ['js-script']);

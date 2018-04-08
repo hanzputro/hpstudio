@@ -8,39 +8,39 @@
   height:90px;
 }
 .logo-search1{                          
-  background:url(../images/icons/search1.png) no-repeat;
+  background:url(dist/images/icons/search1.png) no-repeat;
   @include delay(1s);
   &:hover{
     opacity:0.7;
-    background:url(../images/icons/search1-active.png) no-repeat $bgabuabu5;
+    background:url(dist/images/icons/search1-active.png) no-repeat $bgabuabu5;
   } 
 }
 .logo-contact{
-  background:url(../images/icons/contact.png) no-repeat;
+  background:url(dist/images/icons/contact.png) no-repeat;
   @include delay(1s);
   &:hover{
     opacity:0.7;
-    background:url(../images/icons/contact-active.png) no-repeat $bgabuabu5;
+    background:url(dist/images/icons/contact-active.png) no-repeat $bgabuabu5;
   } 
 }
 .listmenusearch__active{
   position:relative;
   margin:0px 0px -5px 0px;
   height:97px;
-  background:url(../images/icons/search1-active.png) no-repeat $bgabuabu6;
+  background:url(dist/images/icons/search1-active.png) no-repeat $bgabuabu6;
   &:hover{
     opacity:1;
-    background:url(../images/icons/search1-active.png) no-repeat $bgabuabu6;
+    background:url(dist/images/icons/search1-active.png) no-repeat $bgabuabu6;
   } 
 }
 .listmenucontact__active{
   position:relative;
   margin:0px 0px -5px 0px;
   height:97px;
-  background:url(../images/icons/contact-active.png) no-repeat $bgabuabu6;
+  background:url(dist/images/icons/contact-active.png) no-repeat $bgabuabu6;
   &:hover{
     opacity:1;
-    background:url(../images/icons/contact-active.png) no-repeat $bgabuabu6;
+    background:url(dist/images/icons/contact-active.png) no-repeat $bgabuabu6;
   } 
 }
 
@@ -58,33 +58,33 @@
 }
 
 .icon--arrowright{
-  background:url(../images/icons/icon--arrowright.png) no-repeat;
+  background:url(dist/images/icons/icon--arrowright.png) no-repeat;
   &:hover{
-    background:url(../images/icons/icon--arrowright--hover.png) no-repeat;
+    background:url(dist/images/icons/icon--arrowright--hover.png) no-repeat;
   }
 }
 .icon--arrowleft{
-  background:url(../images/icons/icon--arrowleft.png) no-repeat;
+  background:url(dist/images/icons/icon--arrowleft.png) no-repeat;
   &:hover{
-    background:url(../images/icons/icon--arrowleft--hover.png) no-repeat;
+    background:url(dist/images/icons/icon--arrowleft--hover.png) no-repeat;
   }
 }
 .icon--gallery{
-  background:url(../images/icons/icon--gallery.png) no-repeat;
+  background:url(dist/images/icons/icon--gallery.png) no-repeat;
   &:hover{
-    background:url(../images/icons/icon--gallery--hover.png) no-repeat;
+    background:url(dist/images/icons/icon--gallery--hover.png) no-repeat;
   }
 }
 .icon--info{
-  background:url(../images/icons/icon--info.png) no-repeat;
+  background:url(dist/images/icons/icon--info.png) no-repeat;
   &:hover{
-    background:url(../images/icons/icon--info--hover.png) no-repeat;
+    background:url(dist/images/icons/icon--info--hover.png) no-repeat;
   }
 }
 .icon--link{
-  background:url(../images/icons/icon--link.png) no-repeat;
+  background:url(dist/images/icons/icon--link.png) no-repeat;
   &:hover{
-    background:url(../images/icons/icon--link--hover.png) no-repeat;
+    background:url(dist/images/icons/icon--link--hover.png) no-repeat;
   }
 }
 
@@ -97,26 +97,26 @@
   @include delay(.5s);
 }            
 .fb-logo{              
-  background:url(../images/icons/facebook.png) no-repeat;
+  background:url(dist/images/icons/facebook.png) no-repeat;
   &:hover{
-    background:url(../images/icons/facebook-hover.png) no-repeat;
+    background:url(dist/images/icons/facebook-hover.png) no-repeat;
   } 
 }
 .twit-logo{
-  background:url(../images/icons/twitter.png) no-repeat;
+  background:url(dist/images/icons/twitter.png) no-repeat;
   &:hover{
-    background:url(../images/icons/twitter-hover.png) no-repeat;
+    background:url(dist/images/icons/twitter-hover.png) no-repeat;
   } 
 }
 .pint-logo{
-  background:url(../images/icons/pinterest.png) no-repeat;
+  background:url(dist/images/icons/pinterest.png) no-repeat;
   &:hover{
-    background:url(../images/icons/pinterest-hover.png) no-repeat;
+    background:url(dist/images/icons/pinterest-hover.png) no-repeat;
   } 
 }
 .dribb-logo{
-  background:url(../images/icons/dribble.png) no-repeat;
+  background:url(dist/images/icons/dribble.png) no-repeat;
   &:hover{
-    background:url(../images/icons/dribble-hover.png) no-repeat;
+    background:url(dist/images/icons/dribble-hover.png) no-repeat;
   } 
 }

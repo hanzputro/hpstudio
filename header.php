@@ -9,10 +9,10 @@
 <title>HP Studio - Frontend, Mobile, And Game Developer</title>
 <meta name="description" content="Midplaza Building">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/dist/images/favicon.png">
 
 <!-- Custom css -->
-<link type="text/css" rel="stylesheet" href="assets/css/styles.css"/>
+<?php wp_head(); ?>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 		<div class="menubar">
 			<div class="menubar--wrap">
 				<div class="menubar--wrap__logo">
-					<img src="assets/images/logo--hps.png">
+					<img src="<?php bloginfo('template_url'); ?>/dist/images/logo--hps.png">
 				</div>
 				<div class="menubar--wrap__listmenu">
 					<ul class="listmenu--ul">
@@ -41,7 +41,7 @@
         <!-- search & contact -->
 		<div class="searchdiv">
 			<div class="searchdiv--wrap">
-				<img src="assets/images/icons/search2.png">
+				<img src="<?php bloginfo('template_url'); ?>/dist/images/icons/search2.png">
 				<input type="input" placeholder="SEARCH">
 				<div style="clear:both;"></div>				
 			</div>			

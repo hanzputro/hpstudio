@@ -1,5 +1,5 @@
         <!-- header -->
-		<?php include("includes/header.php"); ?>
+		<?php get_header(); ?>
 
         <!-- sidebar or left menu -->
         <!-- tabs pure css -->
@@ -10,7 +10,7 @@
 				<li class=""><a class="menuleft--a" id="link-about" href="#about">ABOUT</a></li>
             </ul>
             <div class="menuleft__minimize">
-                <a><img src="assets/images/icons/minmax.png"></a>
+                <a><img src="<?php bloginfo('template_url'); ?>/dist/images/icons/minmax.png"></a>
             </div>
         </div>		
 
@@ -22,7 +22,7 @@
 					<div class="maincontent__work">
 						<ul class="grid effect-2 maincontent__work--ul" id="work__masonry">
 							<li class="maincontent__work--li">
-								<a href="assets/images/gallery/1.jpg"
+								<a href="<?php bloginfo('template_url'); ?>/dist/images/gallery/1.jpg"
 								data-caption="
 								<div class='button--info tooltips__work--gallery'>
 									<span class='icon--info'></span>
@@ -34,11 +34,11 @@
 								</div>								
 								<div class='button--gallery'><span class='icon--gallery'></span></div>
 								" class="maincontent__work--a tooltips__gallery">
-									<img class="maincontent__work--img" src="assets/images/gallery/1.jpg">
+									<img class="maincontent__work--img" src="<?php bloginfo('template_url'); ?>/dist/images/gallery/1.jpg">
 								</a>																
 							</li>
 							<li class="maincontent__work--li">
-								<a href="assets/images/gallery/2.jpg"
+								<a href="<?php bloginfo('template_url'); ?>/dist/images/gallery/2.jpg"
 								data-caption="
 								<div class='button--info tooltips__work--gallery'>
 									<span class='icon--info'></span>
@@ -50,11 +50,11 @@
 								</div>								
 								<div class='button--gallery'><span class='icon--gallery'></span></div>
 								" class="maincontent__work--a tooltips__gallery">
-									<img class="maincontent__work--img" src="assets/images/gallery/2.jpg">
+									<img class="maincontent__work--img" src="<?php bloginfo('template_url'); ?>/dist/images/gallery/2.jpg">
 								</a>																
 							</li>
 							<li class="maincontent__work--li">
-								<a href="assets/images/gallery/3.jpg"
+								<a href="<?php bloginfo('template_url'); ?>/dist/images/gallery/3.jpg"
 								data-caption="
 								<div class='button--info tooltips__work--gallery'>
 									<span class='icon--info'></span>
@@ -66,7 +66,7 @@
 								</div>								
 								<div class='button--gallery'><span class='icon--gallery'></span></div>
 								" class="maincontent__work--a tooltips__gallery">
-									<img class="maincontent__work--img" src="assets/images/gallery/3.jpg">
+									<img class="maincontent__work--img" src="<?php bloginfo('template_url'); ?>/dist/images/gallery/3.jpg">
 								</a>																
 							</li>
 						</ul>
@@ -125,10 +125,9 @@
 	</div><!-- /container -->
 </body>
 
-	<!-- JS -->
+	<!-- JS -->	
 	<!-- Latest compiled and minified JavaScript -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="assets/js/min/corejs.min.js"></script>
+	<?php wp_footer(); ?>
 
 
 </html>
