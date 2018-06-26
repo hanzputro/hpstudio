@@ -1,0 +1,19 @@
+@mixin sprite($width, $height, $margin, $position) {
+	background:url(../images/sprite.png) $position no-repeat;
+	display: inline-block;
+	width: $width;
+	height: $height;
+	margin-right:$margin;
+}
+
+@mixin sprite-right($width, $height, $margin, $position) {
+	background:url(../images/sprite.png) $position no-repeat;
+	display: inline-block;
+	width: $width;
+	height: $height;
+	margin-left:$margin;
+}
+
+// .ico-arrowdown {
+// 	@include sprite(18px, 20px, 0, -200px 0);
+// }

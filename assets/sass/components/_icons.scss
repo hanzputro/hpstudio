@@ -1,0 +1,118 @@
+/* icons */
+
+.ico-search, .ico-contact{
+	margin:0px 0px;
+	padding:0px 0px;
+	position:relative;
+	width:82px;
+	height:82px;
+}
+.ico-search{                          
+	background: url(dist/images/icons/search1.png) no-repeat center;
+	transition:0.6s ease;
+	&:hover{
+		opacity:0.7;
+		background: $color-grey-dark3 url(dist/images/icons/search1-active.png) no-repeat center;
+	}
+	&.active{
+		position:relative;
+		margin:0px 0px -5px 0px;
+		background: $color-grey2 url(dist/images/icons/search1-active.png) no-repeat center;
+		&:hover{
+			opacity:1;
+			background: $color-grey2 url(dist/images/icons/search1-active.png) no-repeat center;
+		} 
+	}
+}
+.ico-contact{
+	@extend .ico-search;
+  	background: url(dist/images/icons/contact.png) no-repeat center;
+  	&:hover{
+	 	background: $color-grey-dark3 url(dist/images/icons/contact-active.png) no-repeat center;
+  	}
+  	&.active{
+		background: $color-grey2 url(dist/images/icons/contact-active.png) no-repeat center;
+		&:hover{
+			background: $color-grey2 url(dist/images/icons/contact-active.png) no-repeat center;
+		} 
+	}
+}
+
+// icon work
+.ico-arrowright,
+.ico-arrowleft,
+.ico-gallery,
+.ico-info,
+.ico-link{
+	float:left;
+	padding:10px;
+	width:35px;
+	height:35px;
+	transition: 0.3s ease;
+}
+
+.ico-arrowright{
+  	background: url(dist/images/icons/icon--arrowright.png) no-repeat;
+  	&:hover{
+	 	background: url(dist/images/icons/icon--arrowright--hover.png) no-repeat;
+  	}
+}
+.ico-arrowleft{
+  	background: url(dist/images/icons/icon--arrowleft.png) no-repeat;
+  	&:hover{
+	 	background: url(dist/images/icons/icon--arrowleft--hover.png) no-repeat;
+  	}
+}
+.ico-gallery{
+  	background: url(dist/images/icons/icon--gallery.png) no-repeat;
+  	&:hover{
+	 	background: url(dist/images/icons/icon--gallery--hover.png) no-repeat;
+  	}
+}
+.ico-info{
+  	background: url(dist/images/icons/icon--info.png) no-repeat;
+  	&:hover{
+	 	background: url(dist/images/icons/icon--info--hover.png) no-repeat;
+  	}
+}
+.ico-link{
+	width:30px; height:30px;
+  	background-image: url(dist/images/icons/icon--link.png);
+  	background-size:contain;
+  	&:hover{
+	 	background-image: url(dist/images/icons/icon--link--hover.png);
+  	}
+}
+
+// social media
+.ico-fb, .ico-twit, .ico-pint, .ico-dribb{
+	float:left;
+	margin:5px 10px 0px 0px;
+	width:30px;
+	height:30px;
+	transition: 0.5s ease;
+}            
+.ico-fb{              
+  background: url(dist/images/icons/facebook.png) no-repeat;
+  &:hover{
+	 background: url(dist/images/icons/facebook-hover.png) no-repeat;
+  } 
+}
+.ico-twit{
+  background: url(dist/images/icons/twitter.png) no-repeat;
+  &:hover{
+	 background: url(dist/images/icons/twitter-hover.png) no-repeat;
+  } 
+}
+.ico-pint{
+  background: url(dist/images/icons/pinterest.png) no-repeat;
+  &:hover{
+	 background: url(dist/images/icons/pinterest-hover.png) no-repeat;
+  } 
+}
+.ico-dribb{
+  background: url(dist/images/icons/dribble.png) no-repeat;
+  &:hover{
+	 background: url(dist/images/icons/dribble-hover.png) no-repeat;
+  } 
+}

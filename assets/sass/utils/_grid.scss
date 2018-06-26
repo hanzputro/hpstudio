@@ -1,0 +1,93 @@
+$gutter:2%;
+.grid{
+    &:before,
+    &:after{
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after { clear: both; }
+    [class*="span"] {
+        display: block;
+        float: left;
+        width: 100%;
+        min-height: 5px;
+        margin-right:$gutter;
+        // margin-left: 2.127659574468085%;
+        box-sizing: border-box;
+        &:last-child { margin-right: 0; }
+    }
+    .span1 {
+        width: function-calc((100%/12-$gutter)+($gutter/12));
+        &:nth-child(12n){
+            margin-right: 0 !important; // 100%/12-$gutter
+        }
+    }
+    .span2 { 
+        width: function-calc((100%/6-$gutter)+($gutter/6)); // 100%/6
+        &:nth-child(6n){
+            margin-right: 0 !important;
+        }
+    } 
+    .span3 { 
+        width: function-calc((100%/4-$gutter)+($gutter/4)); // 100%/4
+        &:nth-child(4n){
+            margin-right: 0 !important;
+        } 
+    }
+    .span4 { 
+        width: function-calc((100%/3-$gutter)+($gutter/3)); // 100%/3 
+        &:nth-child(3n){
+            margin-right: 0 !important;
+        }
+    }
+    .span5 { width: function-calc((100%/2.4-$gutter)+($gutter/2.4)); } // 100%/2,4
+    .span6 { 
+        width: function-calc((100%/2-$gutter)+($gutter/2)); // 100%/2
+        &:nth-child(2n){
+            margin-right: 0 !important;
+        }
+    } 
+    .span7 { width: function-calc((100%/1.714285714285714-$gutter)+($gutter/1.714285714285714)); } // 100%/1,714285714285714
+    .span8 { width: function-calc((100%/1.5-$gutter)+($gutter/1.5)); } // 100%/1,5
+    .span9 { width: function-calc((100%/1.333333333333333-$gutter)+($gutter/1.333333333333333)); } // 100%/1,333333333333333
+    .span10 { width: function-calc((100%/1.2-$gutter)+($gutter/1.2)); } // 100%/1,2
+    .span11 { width: function-calc((100%/1.090909090909091-$gutter)+($gutter/1.090909090909091)); } // 100%/1,090909090909091
+    .span12 { width: function-calc((100%/1-$gutter)+($gutter/1)); } // 100%/1
+}
+
+.grid-fluid,
+.row-fluid{
+    display:table;
+    margin-right:-($gutter/2);
+    margin-left:-($gutter/2);
+    &:before,
+    &:after{
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after { clear: both; }
+    [class*="span"] {
+        display: inline-table;
+        // float: left;
+        width: 100%;
+        min-height: 5px;
+        margin:0 ($gutter/2) $gutter ($gutter/2);
+        // margin-left: 2.127659574468085%;
+        box-sizing: border-box;
+        // &:first-child { margin-left: 0; }
+    }
+    .span1 { width: function-calc((100%/12-$gutter)); } // 100%/12-$gutter
+    .span2 { width: function-calc((100%/6-$gutter)); } // 100%/6
+    .span3 { width: function-calc((100%/4-$gutter)); } // 100%/4
+    .span4 { width: function-calc((100%/3-$gutter)); } // 100%/3 
+    .span5 { width: function-calc((100%/2.4-$gutter)); } // 100%/2,4
+    .span6 { width: function-calc((100%/2-$gutter)); } // 100%/2    
+    .span7 { width: function-calc((100%/1.714285714285714-$gutter)); } // 100%/1,714285714285714
+    .span8 { width: function-calc((100%/1.5-$gutter)+($gutter/1.5)); } // 100%/1,5
+    .span9 { width: function-calc((100%/1.333333333333333-$gutter)); } // 100%/1,333333333333333
+    .span10 { width: function-calc((100%/1.2-$gutter)); } // 100%/1,2
+    .span11 { width: function-calc((100%/1.090909090909091-$gutter)); } // 100%/1,090909090909091
+    .span12 { width: function-calc((100%/1-$gutter)); } // 100%/1
+}

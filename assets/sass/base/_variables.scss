@@ -1,0 +1,219 @@
+// Colors
+$color-white: #fff;
+$color-blue: #71B5E5;
+$color-blue2: #428bca;
+$color-green: #B3CE4A;
+$color-purple: #3f13a4;
+$color-orange: #F9B233;
+$color-red: #EB5D45;
+$color-yellow: #f8e64c;
+$color-grey: #d6d4d4;
+$color-grey2: #686666;
+$color-grey-dark: #3f3f3f;
+$color-grey-dark2: #3e3e3e;
+$color-grey-dark3: #2f3438;
+$color-grey-dark4: #242323;
+
+$bgabuabu2: $color-grey;
+$bgabuabu3: $color-grey-dark;
+$bgabuabu4: $color-grey-dark4;
+$bgabuabu5: $color-grey-dark3;
+$bgabuabu6: $color-grey2;
+$bgkuning: $color-yellow;
+
+// base
+$default-font: 'Open Sans',sans-serif;
+$default-lheight:1.1;
+$default-weight:400;
+$default-spacing:-0.3px;
+$default-size: 100%;
+$default-color: $color-grey;
+$default-background: $color-grey-dark4;
+
+// typography
+$h1-size: 36px;
+$h1-color: inherit;
+$h1-lheight: 1.4;
+$h1-weight: 500;
+$h1-margin: 20px 0 10px 0;
+$h1-2-size: 38px;
+$h1-2-weight: 400;
+
+$h2-size: 30px;
+$h2-color: inherit;
+$h2-lheight: $default-lheight;
+$h2-weight: 500;
+$h2-margin: 20px 0 10px 0;
+
+$h3-size: 24px;
+$h3-color: inherit;
+$h3-lheight: $default-lheight;
+$h3-weight: 500;
+$h3-margin: 0px 0 10px 0;
+
+$h4-size: 18px;
+$h4-color: inherit;
+$h4-lheight: $default-lheight;
+$h4-weight: 500;
+$h4-margin: 10px 0 10px 0;
+
+$h5-size: 14px;
+$h5-color: inherit;
+$h5-lheight: $default-lheight;
+$h5-weight: 500;
+$h5-margin: 10px 0 10px 0;
+
+$h6-size: 12px;
+$h6-color: inherit;
+$h6-lheight: $default-lheight;
+$h6-weight: 500;
+$h6-margin: 10px 0 10px 0;
+
+$p-size: $default-size;
+$p-color: $color-grey;
+$p-lheight: 24px;
+$p-margin: 0 0 10px 0;
+
+$small-size: 12px;
+$small-lheight: 20px;
+
+$label-size: $default-size;
+$a-color: $color-blue2;
+$a-link-color: transparentize( $color-blue2, 0.5);
+$a-decoration: none;
+
+$hr-border:3px double $color-yellow;
+$hr-width: 100%;
+$hr-margin: 15px 0;
+$hr-2-border:2px solid #3e3e3e;
+$hr-2-width: 45px;
+$hr-2-margin: 15px auto;
+
+$ul-margin: 1em 0;
+
+// setting
+$container-width: 1440px;
+$containerWrapper-padding: 80px 40px;
+
+// text
+$warning-color: $color-yellow;
+$error-color: $color-red;
+$info-color: $color-blue;
+$succes-color: $color-green;
+
+// input
+$input-padding: 6px 10px;
+$input-border: 1px solid white;
+$input-radius: 0;
+$input-height: 32px;
+$input-color: $color-grey2;
+$input-background: #fff;
+$input-outline: 1px solid $color-yellow;
+
+// button
+$button-1-font: $default-font;
+$button-1-size: 20px;
+$button-1-lheight: inherit;
+$button-1-padding: 7px 27px;
+$button-1-radius: 2px;
+$button-1-color: $color-white;
+$button-1-letterspacing: 0;
+$button-1-shadow: none;
+$button-1-bg: #07bcf3;
+$button-1-bg-hover: #03a2d2;
+$button-1-small-size: 14px;
+$button-1-small-padding: 8px 15px;
+$button-1-big-size: 21px;
+$button-1-big-padding: 15px 35px;
+
+$button-2-font: 'Open Sans',sans-serif;
+$button-2-size: 20px;
+$button-2-lheight: inherit;
+$button-2-padding: 7px 27px;
+$button-2-border: 2px solid #d6d4d4;
+$button-2-radius: 0px;
+$button-2-color: #ecdb49;
+$button-2-letterspacing: 0;
+$button-2-shadow: none;
+$button-2-bg: #3f3f3f;
+$button-2-bg-hover: #2d2c2c;
+$button-2-small-size: 14px;
+$button-2-small-padding: 8px 15px;
+$button-2-big-size: 21px;
+$button-2-big-padding: 15px 35px;
+
+$button-3-font: $default-font;
+$button-3-size: 20px;
+$button-3-lheight: inherit;
+$button-3-padding: 7px 27px;
+$button-3-radius: 2px;
+$button-3-color: $color-white;
+$button-3-letterspacing: 0;
+$button-3-shadow: none;
+$button-3-bg: #07bcf3;
+$button-3-bg-hover: #03a2d2;
+$button-3-small-size: 14px;
+$button-3-small-padding: 8px 15px;
+$button-3-big-size: 21px;
+$button-3-big-padding: 15px 35px;
+
+$button-4-font: $default-font;
+$button-4-size: $default-size;
+$button-4-lheight: 18px;
+$button-4-padding: 10px 15px;
+$button-4-radius: 1px;
+$button-4-color: transparentize(#484848, 0.5);
+$button-4-letterspacing: 0;
+$button-4-shadow: none;
+$button-4-bg: #DCDCDC;
+$button-4-bg-hover: darken(#DCDCDC, 3%);
+$button-4-small-size: 12px;
+$button-4-small-padding: 4px 10px;
+$button-4-big-size: 21px;
+$button-4-big-padding: 15px 35px;
+
+$button-5-font: $default-font;
+$button-5-size: $default-size;
+$button-5-lheight: 18px;
+$button-5-padding: 10px 15px;
+$button-5-border: 1px solid $color-blue;
+$button-5-radius: 3px;
+$button-5-color: $color-blue;
+$button-5-letterspacing: 0;
+$button-5-shadow: 0 3px 7px rgba(0,0,0,0.1);
+$button-5-bg: #fff;
+$button-5-bg-hover: darken(#fff, 2%);
+$button-5-small-size: 12px;
+$button-5-small-padding: 4px 10px;
+$button-5-big-size: 18px;
+$button-5-big-padding: 13px 20px 12px 20px;
+
+
+// responsive
+@media (max-width: 1024px){
+	$h1-size: 36px;
+	$h2-size: 24px;
+	$h3-size: 22px;
+	$h4-size: 28px;
+	$h5-size: 16px;
+	$h6-size: 14px;
+	$p-size: 14px;
+}
+
+@media (max-width: 768px){
+	$h1-size: 42px;
+	$h2-size: 28px;
+	$h5-size: 20px;
+	$h6-size: 18px;
+	$p-size: 18px;
+}
+
+@media (max-width: 480px){
+	$h1-size: 38px;
+	$h2-size: 22px;
+	$h3-size: 28px;
+	$h4-size: 17px;
+	$h5-size: 16px;
+	$h6-size: 14px;
+	$p-size: 14px;
+}

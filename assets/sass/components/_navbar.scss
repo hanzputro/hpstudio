@@ -1,0 +1,9 @@
+.navbar{
+    @extend %clearfix;
+    @extend %float-right;
+    margin:0;
+    padding:0;
+    .navbar--li{
+        @extend %float-left;        
+    }
+}

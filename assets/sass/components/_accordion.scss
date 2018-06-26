@@ -1,0 +1,69 @@
+.accordion{
+    .accordion__field{
+        position: relative;
+        padding:25px 0;
+        border-bottom:1px solid #DEE2E3;
+    }
+    .accordion__ico{
+        content:'';
+        position: absolute;
+        top:0; bottom:0; right:15px;
+        width:18px; height:18px;
+        background:url(/images/ico/ico-plus-bluedark.svg) no-repeat;
+        margin:auto;
+        transition:0.2s ease;
+    }
+    .accordion__input{
+        position: absolute;
+        top:0; left:0;
+        cursor: pointer;
+        width: 100%; height: 100%;
+        z-index: 1;
+        opacity: 0;
+        &:checked{
+            & ~ .accordion__ico{
+                transform:rotate(45deg);
+            }
+            & ~ .accordion__content{
+                opacity:1;
+                visibility:visible;
+                height:initial;
+                width: calc(100% - 45px);
+                margin: 20px 0 0 0;
+                transition:0.2s ease;
+                *{
+                    height: initial;
+                    padding: inherit;
+                    margin: inherit;
+                }
+            }
+        }
+    }
+    .accordion__title{
+
+    }
+    .accordion__content{
+        opacity:0;
+        visibility:hidden;
+        height:0;        
+        *{
+            height: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .accordion{
+        .accordion__field{
+            padding:10px 0;
+        }
+        .accordion__ico{
+            right:0;
+            width:14px; height:14px;
+            background-size:cover;
+        }
+    }
+}

@@ -1,0 +1,192 @@
+@import "../base/variables";
+
+.icon-sell{
+  background:url(../images/sell.png) no-repeat;
+  width:26px;
+  height:28px;  
+}
+
+body > main{
+	position:relative;
+	margin:0;
+	padding:0px 0px 0px 150px;
+	height:100%;
+}
+
+.floor-1{ background: $color-orange; }
+.floor-2{ background: $color-blue; }
+.floor-3{ background: $color-green; }
+.floor-4{ background: $color-red; }
+
+.main-section{
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top:82px;
+	height:100%;
+	min-height: calc(100vh - 82px);
+	overflow: hidden;
+	box-shadow: inset 0px 0px 250px #000;
+	section{
+		display:none;
+		width:100%;
+		&.active{
+			display:block;
+		}
+	}
+	.cover{
+		position: absolute;
+	    top: 100%; left: 0;
+	    width: 100%;
+	    height: 500%;
+	    // background: linear-gradient(to bottom, rgba(248,230,76,0) 0%,rgba(248,230,76,0.8) 10%,
+	    // 	rgba(248,230,76,1) 19%,rgba(248,230,76,1) 20%,rgba(248,230,76,1) 51%,rgba(248,230,76,1) 80%,
+	    // 	rgba(248,230,76,1) 81%,rgba(248,230,76,0.8) 90%,rgba(248,230,76,0) 100%); 
+	    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 10%,rgba(0,0,0,1) 19%,rgba(0,0,0,1) 20%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 80%,rgba(0,0,0,1) 81%,rgba(0,0,0,0.8) 90%,rgba(0,0,0,0) 100%);
+	    z-index: 1;
+	    transition: 1.5s ease;
+	}
+	&.active{
+		.cover{
+			top:-500%;
+		}
+	}
+}
+
+.section{
+	margin:0px 0px 0px 0px;
+	padding:0px; 
+	.section__content{
+		margin:0px auto 0px auto;
+		padding:0px 0px 0px 0px;
+		width:100%;
+		h1{ 
+			max-width:1000px;
+			// font-size:30px;
+			font-weight:100;
+			margin:0 auto;
+			.green{ 
+				color:#27ff61;
+				&:after{ border-bottom:3px double #27ff61 !important; }						
+			}
+			.orange{ 
+				color:#f9b233; 
+				&:after{ border-bottom:3px double #f9b233 !important; }
+			}
+			.blue{ 
+				color:#0effeb; 
+				&:after{ border-bottom:3px double #0effeb !important; }
+			}
+			.yellow{ 
+				color:$color-yellow; 
+				&:after{ border-bottom:3px double $color-yellow !important; }
+			}
+			.red{ 
+				color:#eb5d45; 
+				&:after{ border-bottom:3px double #eb5d45 !important; }
+			}					
+			.big{
+				position:relative;
+				display:inline-block;
+				font-size:50px;
+				font-weight:800;
+				border-bottom:3px double #3f3f3f;
+				text-shadow: 0 1px 0 #333,
+	               0 2px 0 #333,
+	               0 3px 0 #333,
+	               0 4px 0 #333,
+	               0 5px 0 #333,
+	               0 6px 1px rgba(0,0,0,.1),
+	               0 0 5px rgba(0,0,0,.1),
+	               0 1px 3px rgba(0,0,0,.3),
+	               0 3px 5px rgba(0,0,0,.2),
+	               0 5px 10px rgba(0,0,0,.25),
+	               0 10px 10px rgba(0,0,0,.2),
+	               0 20px 20px rgba(0,0,0,.15);
+				&:after{
+					content:'';
+					position:absolute;
+					bottom:-3px; right:0;
+					width:0%; height:3px;
+					border-bottom:3px double $color-yellow;
+					transition:0.3s ease;
+				}
+				&:hover{
+					&:after{ width:100%; right:initial; left:0; }
+				}						
+			}
+			.passion{
+				span{ font-size: 55px; }
+			}
+			.quote{
+				background: #484848;
+				padding: 0px 10px;
+				font-style:oblique;
+			}
+			.button{
+				font-size:38px;
+				padding:0px 12px;
+				border:1px solid transparent;						
+				border-bottom:3px double #3f3f3f; 
+				transition:0.3s ease;
+				&.yellow{
+					&:hover{								 
+						border:1px solid $color-yellow;
+						border-bottom:3px double $color-yellow !important; 
+					}
+				}
+				&.red{
+					&:hover{ 
+						border:1px solid #eb5d45;
+						border-bottom:3px double #eb5d45 !important; 
+					}
+				}
+			}
+		}
+		p{
+			.label{ 
+				position:relative;
+				display:inline-block;
+				width:90px; 
+				font-weight:700; 
+				&:after{
+					content:':';
+					position: absolute;
+					right:10px;
+				}
+			}
+		}
+		.about{
+			padding:30px;			
+		}        
+		.work{
+			position:relative;
+			height:100%;
+			ul{
+				
+			}
+		}
+		.contact{
+			max-width:800px;
+			margin:0 auto;
+			padding:30px;
+			h3{ color:$color-yellow; }
+		}
+	}    
+}
+
+@media (max-width:1024px){
+	.section{
+		.section__content{
+			.about{
+				h1{ 
+					font-size:30px;
+					.big{ font-size:40px; }
+					.passion span{ font-size:40px; }
+					.button{ font-size:30px; } 
+				}
+			}
+		}
+	}
+}

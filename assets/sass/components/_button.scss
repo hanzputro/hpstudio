@@ -1,0 +1,159 @@
+a,
+input[type='submit'],
+button{
+    cursor: pointer;
+    position:relative;
+    display: inline-block;
+	border: none; 
+    // outline: none; 
+	text-decoration:none;
+	&.button--1{
+        font-family: $button-1-font;
+        font-size: $button-1-size;
+        line-height: $button-1-lheight;
+		padding: $button-1-padding;
+        color: $button-1-color;
+        letter-spacing: $button-1-letterspacing;
+        transition:0.3s ease;
+        box-shadow: $button-1-shadow;
+        background: $button-1-bg;
+        border-radius: $button-1-radius;
+        margin:0 2px;
+        white-space: nowrap;
+        &:hover{
+            background: $button-1-bg-hover;
+        }
+        &.small{
+            font-size: $button-1-small-size;
+            padding: $button-1-small-padding;         
+        }
+        &.big{
+        	font-size: $button-1-big-size;
+			padding: $button-1-big-padding;	        
+        }
+    }
+    &.button--2{
+        @extend .button;
+        font-family: $button-2-font;
+        font-size: $button-2-size;
+        line-height: $button-2-lheight;
+        padding: $button-2-padding;
+        color: $button-2-color;
+        letter-spacing: $button-2-letterspacing;
+        box-shadow: $button-2-shadow;
+        background: $button-2-bg;
+        border: $button-2-border;
+        border-bottom:3px double $color-yellow;
+        border-radius: $button-2-radius;
+        &:hover{
+            background: $button-2-bg-hover;
+        }
+        &.small{
+            font-size: $button-2-small-size;
+            padding: $button-2-small-padding;         
+        }
+        &.big{
+            font-size: $button-2-big-size;
+            padding: $button-2-big-padding;           
+        }
+    }
+    &.button--3{
+        @extend .button;
+        font-family: $button-3-font;
+        font-size: $button-3-size;
+        line-height: $button-3-lheight;
+        padding: $button-3-padding;
+        color: $button-3-color;
+        letter-spacing: $button-3-letterspacing;
+        box-shadow: $button-3-shadow;
+        background: $button-3-bg;
+        border-radius: $button-3-radius;
+        &:hover{
+            background: $button-3-bg-hover;
+        }
+        &.small{
+            font-size: $button-3-small-size;
+            padding: $button-3-small-padding;         
+        }
+        &.big{
+            font-size: $button-3-big-size;
+            padding: $button-3-big-padding;           
+        }
+    }
+    &.button--4{
+        @extend .button;
+        font-family: $button-4-font;
+        font-size: $button-4-size;
+        line-height: $button-4-lheight;
+        padding: $button-4-padding;
+        color: $button-4-color;
+        letter-spacing: $button-4-letterspacing;
+        box-shadow: $button-4-shadow;
+        background: $button-4-bg;
+        border-radius: $button-4-radius;
+        &:hover{
+            background: $button-4-bg-hover;
+        }
+        &.small{
+            font-size: $button-4-small-size;
+            padding: $button-4-small-padding;         
+        }
+        &.big{
+            font-size: $button-4-big-size;
+            padding: $button-4-big-padding;           
+        }
+    }
+    &.button--5{
+        @extend .button;
+        font-family: $button-5-font;
+        font-size: $button-5-size;
+        line-height: $button-5-lheight;
+        padding: $button-5-padding;
+        color: $button-5-color;
+        letter-spacing: $button-5-letterspacing;
+        box-shadow: $button-5-shadow;
+        background: $button-5-bg;
+        border: $button-5-border;
+        border-radius: $button-5-radius;
+        &:hover{
+            background: $button-5-bg-hover;
+        }
+        &.small{
+            font-size: $button-5-small-size;
+            padding: $button-5-small-padding;         
+        }
+        &.big{
+            font-size: $button-5-big-size;
+            padding: $button-5-big-padding;           
+        }
+    }
+}
+
+// responsive
+@media (max-width: 1024px) {
+    a,
+    input[type='submit'],
+    button{
+        &.button{        
+            font-size: 17px;
+            padding: 7px 25px;
+            margin:0 1px;
+            &.big{
+                // font-size: 24px;
+                // padding: 15px 35px;
+                // letter-spacing:1px;
+                // font-weight:600;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    a,
+    input[type='submit'],
+    button{
+        &.button{
+            &.big{ font-size: 18px; }
+        }
+    }
+}

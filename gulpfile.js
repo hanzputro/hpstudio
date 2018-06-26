@@ -18,8 +18,9 @@ var browserSync = require('browser-sync').create();
 */
 gulp.task('sass', function () { 
     gulp.src([
-        'assets/sass/*.scss'
+        'assets/sass/**/*.scss'
         ])
+        .pipe(wait(2000))
         .pipe(sass())
         .pipe(minify({
             minify: true,
@@ -44,13 +45,13 @@ gulp.task('sass', function () {
 */
 gulp.task('js-plugin', function () {
     gulp.src([        
-        'assets/vendor/bxslider-4/dist/jquery.bxslider.js',
-        'assets/vendor/baguetteBox/dist/baguetteBox.js',
-        'assets/js/component/modernizr.custom.js',
-        'assets/js/component/classie.js',
-        'assets/js/component/masonry.pkgd.min.js',
-        'assets/js/component/AnimOnScroll.js',        
-        'assets/js/component/imagesloaded.js'
+        // 'assets/js/component/bxslider.js',
+        'assets/js/component/baguetteBox.js'
+        // 'assets/js/component/modernizr.custom.js',
+        // 'assets/js/component/classie.js',
+        // 'assets/js/component/masonry.pkgd.min.js',
+        // 'assets/js/component/AnimOnScroll.js',        
+        // 'assets/js/component/imagesloaded.js'
     ])
     .pipe(minify({
         minify: true,
@@ -68,7 +69,7 @@ gulp.task('js-plugin', function () {
 });
 gulp.task('js-script', function () {
     gulp.src([        
-        'assets/js/*.js'
+        'assets/js/**/*.js'
     ])
     .pipe(minify({
         minify: true,
@@ -98,6 +99,28 @@ gulp.task('php', function() {
 
 /*
  |--------------------------------------------------------------------------
+ | WEBPACK for Vuejs 2
+ |--------------------------------------------------------------------------
+ */
+// var webpack = require('webpack');
+// var webpackConfig = require('./webpack.config.js');
+// var webpackRun = webpack(webpackConfig);
+
+// gulp.task('webpack', function(done) {
+//     webpackRun.run(function(err, stats) {
+//         if(err) {
+//           console.log('Error', err);
+//         }
+//         else {
+//           console.log(stats.toString());
+//         }
+//         done();
+//     });
+// });
+
+
+/*
+ |--------------------------------------------------------------------------
  | RUN 
  |--------------------------------------------------------------------------
 */
@@ -106,9 +129,9 @@ gulp.task('serve', ['sass', 'js-plugin', 'js-script'], function() {
         proxy: "http://localhost/wordpress/hanifputra"
         // proxy: "lochp.com"
     });
-    gulp.watch(['assets/sass/*/**.scss'], ['sass']);
+    gulp.watch(['assets/sass/**/*.scss'], ['sass']);
     gulp.watch('assets/js/*.js', ['js-script']);
     gulp.watch('*.php', ['php']).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'js-plugin', 'js-script']);
+// gulp.task('default', ['webpack']);

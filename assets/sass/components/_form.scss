@@ -1,0 +1,136 @@
+input:focus,
+select:focus,
+textarea:focus {
+    outline: $input-outline;
+}
+form{
+    margin: 0;
+    padding: 0;
+    input, textarea, select {
+        font-family: $default-font;
+        font-size: $default-size;
+        border: $input-border;
+        padding: $input-padding;
+        appearance: none;
+        border-radius: $input-radius;
+        vertical-align: middle;
+        width:auto;
+        height: $input-height;
+        color: $input-color;
+        background: $input-background;
+        &.is-error{ border: 3px double red; }
+    }
+    input[type="file"]{
+        background:white;
+        border:0;
+        padding:2px 0;
+    }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance:textfield;
+    }
+    input[type="checkbox"], 
+    input[type="radio"]{
+        width: initial; height:auto;        
+    }
+    input[type="checkbox"]{ appearance: checkbox; }
+    input[type="radio"]{ appearance: radio; }
+    label{}
+    textarea{ height:initial; }
+    .field{
+        margin-bottom:15px; 
+        input, 
+        select, 
+        textarea{
+           width:100%;
+           margin:2px 0;               
+        }
+        input[type="checkbox"], 
+        input[type="radio"]{
+            margin-bottom:0;
+            width: auto; 
+        }
+        input[type="submit"]{
+            width:auto;
+            height:auto;
+            margin:auto;
+        }
+        label{ margin-right:5px; }
+        span{ color:white; }
+        .info--error{
+            display: none;
+            float: right;
+            color: #ff6060 !important;
+            font-size:12px;
+        }
+        &.error{
+            .info--error{ display: inline-block; }
+            input,
+            select,
+            textarea{
+               background:rgba(165,17,9,0.2);
+               border:1px solid #a9363e;               
+            }
+        }
+        &.select{
+            position:relative;
+            &:after{
+                content:'';
+                position:absolute;
+                top:0; bottom:0; right:10px;
+                margin:auto;
+                background-image: url(/images/ico/ico-selectarrow-purple.svg);
+                background-size:contain;
+                background-repeat: no-repeat;
+                width:10px; height:5px;
+            } 
+        }
+        &.search{
+            position:relative;
+            &:after{
+                content:'';
+                position:absolute;
+                top:0; bottom:0; left:10px;
+                margin:auto;
+                background-image: url(/images/ico/ico-search.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                width:14px; height:14px;
+            }
+            input{
+                padding-left:30px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px){
+        .field{
+            flex-flow:row wrap;
+            input[type="checkbox"], 
+            input[type="radio"]{
+                width: 20px; height:20px;
+                margin:2px 0;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        input, textarea, select {
+            width:100%;
+        }
+        input[type="checkbox"], 
+        input[type="radio"]{ 
+            width: 20px; height:20px;
+        }
+        .field{
+            input, 
+            select, 
+            textarea{
+                width:100%;              
+            }
+        }
+    }
+}

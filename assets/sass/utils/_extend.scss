@@ -1,0 +1,38 @@
+// ####################################
+// selector that wouldn't rendered
+// ####################################
+%noflicker{
+    backface-visibility:hidden; 
+    transform:translateZ(0) translate3d(0,0,0);
+    transform-style: preserve-3d;
+}
+%clearfix{
+    &:before,
+    &:after{
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after { clear: both; }
+}
+%float-left{ display:inline; float:left; }
+%float-right{ display:inline; float:right; }
+%flex { display: flex; align-items: center; }
+%row-wrap{ flex-flow: row wrap; }
+%vtop{ align-items: end; }
+%left{
+    text-align: left;
+    justify-content: flex-start;
+}
+%right{
+    text-align: right;
+    justify-content: flex-end;
+}
+%center{
+    text-align: center;
+    justify-content: center;
+}
+%justify{ text-align:justify; }
+%around{ justify-content: space-around; }
+%between{ justify-content: space-between; }
+%nowrap{ white-space:nowrap; }

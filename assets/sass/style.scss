@@ -1,85 +1,23 @@
-/*!
-Theme Name: Hanif Putra
-Description: Website themes
-Version: 2018
-Author: hanzputro (Hanif Putra)
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: hanif putra, frontend developer.
-*/
-/*********************************************************/
-/*                 sass config                  */
-/*********************************************************/
+/* Utils */
+@import "utils/function";
+@import "utils/grid";
 
-@import "core";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+/* Base */
+@import "base/normalize";
+@import "base/variables";
+// @import "base/fonts";
+@import "base/sprite";
+@import "base/typography";
+@import "base/config";
 
+/* Components */
+@import "components/form";
+@import "components/icons";
+@import "components/button";
+@import "components/header";
+@import "components/sidemenu";
+@import "components/tabs";
+@import "components/tooltips";
+@import "components/grid-masonry";
 
-/*********************************************************/
-/*                     custom icon                     */
-/*********************************************************/
-.icon-sell{
-  background:url(../images/sell.png) no-repeat;
-  width:26px;
-  height:28px;  
-}
-/*********************************************************/
-/*                 custom sass styles                  */
-/*********************************************************/
-
-html { height: 100%; margin:0; padding:0; }
-
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: calibri;
-  background:$bgabuabu4;
-  font-weight: 400;
-  font-size: 100%;
-  color: #333;
-  margin:0;
-  padding:0;
-  // font-family: 'Open Sans', sans-serif;
-}
-.container{
-  position:relative;
-  margin:0;
-  padding:90px 0px 0px 150px;
-  height:100%;  
-  //background:#fff;
-}
-
-.floor-1{background: #F9B233;}
-.floor-2{background: #71B5E5;}
-.floor-3{background: #B3CE4A;}
-.floor-4{background: #EB5D45;}
-
-.maincontent{
-  //position:relative;
-  margin:0px 0px 0px 0px;
-  padding:0px;
-  //background:$bgabuabu4;
-  //overflow-y:hidden;
- // display: none;
- 
-    .maincontent--wrap{
-      margin:0px auto 0px auto;
-      padding:0px 0px 0px 0px;
-      width:100%;        
-        .maincontent__work{
-          position:relative;
-          //background:#ffa200;
-          height:100%;
-        }
-    }    
-}
-
-
+/* Pages */
