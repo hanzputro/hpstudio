@@ -19,10 +19,7 @@ body > main{
 .floor-4{ background: $color-red; }
 
 .main-section{
-	position:relative;
-	display:flex;
-	justify-content:center;
-	align-items:center;
+	position:relative;	
 	margin-top:82px;
 	height:100%;
 	min-height: calc(100vh - 82px);
@@ -57,10 +54,14 @@ body > main{
 .section{
 	margin:0px 0px 0px 0px;
 	padding:0px; 
+	&#about,
+	&#contact{
+		height:100%;		
+	} 
 	.section__content{
 		margin:0px auto 0px auto;
 		padding:0px 0px 0px 0px;
-		width:100%;
+		width:100%; height:100%;
 		h1{ 
 			max-width:1000px;
 			// font-size:30px;
@@ -157,10 +158,18 @@ body > main{
 				}
 			}
 		}
-		.about{
+		.about{	
+			height:100%;
+			display:flex;
+			justify-content:center;
+			align-items:center;		
 			padding:30px;			
 		}        
 		.work{
+			height:100%;
+			display:flex;
+			justify-content:center;
+			align-items:center;
 			position:relative;
 			height:100%;
 			ul{
@@ -168,12 +177,17 @@ body > main{
 			}
 		}
 		.contact{
+			display:flex;
+			flex-flow:row wrap;
+			align-items:center;
 			max-width:800px;
 			margin:0 auto;
 			padding:30px;
 			h3{ color:$color-yellow; }
-		}
-	}    
+			address{ font-style:initial; }
+			form{ width:100%; }
+		}		
+	}	   
 }
 
 @media (max-width:1024px){

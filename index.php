@@ -16,14 +16,14 @@
                 <a><img src="<?php bloginfo('template_url'); ?>/dist/images/icons/minmax.png"></a>
             </div>
             <small class="copyright">&copy; 2018, Right Reserved</small>
-        </aside>		
+        </aside>
 
 		<div class="main-section">
 			<!-- cover -->
 			<div class="cover"></div>
 
 			<!-- Section : Me -->
-			<section class="section" id="about">
+			<section class="section active" id="about">
 				<div class="section__content left">
 					<div class="about">
 						<h1>
@@ -40,7 +40,7 @@
 			</section>
 
 			<!-- Section : Work -->
-			<section class="section active" id="work">
+			<section class="section" id="work">
 				<div class="section__content">
 					<div class="work">
 						<!-- Tab services category -->
@@ -60,56 +60,190 @@
 							    <label class="tab-nav" for="tab-3">Web Development</label>
 						  	</div>
 						</div> -->
-
-						<ul class="grid-masonry">
-							<?php
-							for ($x = 0; $x <= 3; $x++) {
-							?>						
+						<ul class="grid-masonry">						
 							<li class="grid-masonry__item work__content">
-								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/gallery/1.jpg"
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/hino-jabotabek.jpg"
 									data-caption="
 									<div class='button--info tooltips--work'>
 										<span class='ico-info'></span>
 										<div class='tooltips--work__content'>
-											<h1>Stay Hungry, Stay Foolish <a href=''><span class='ico-link'></span></a></h1>
+											<h1>Hino Jabotabek<a href='https://hinojabotabek.com/' class='popup--link' target='blank_'><span class='ico-link'></span></a></h1>
 											<hr>
-											<p>JUARA 1</p>
+											<p>Web Design, Web Development</p>
 										</div>
 									</div>" class="tooltips__gallery">
-									<img id="img1" src="<?php bloginfo('template_url'); ?>/dist/images/gallery/1.jpg">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/hino-jabotabek.jpg">
 								</a>																
 							</li>
 							<li class="grid-masonry__item work__content">
-								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/gallery/2.jpg"
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/flashads-portal.jpg"
 									data-caption="
 									<div class='button--info tooltips--work'>
 										<span class='ico-info'></span>
 										<div class='tooltips--work__content'>
-											<h1>Stay Hungry, Stay Foolish <a href=''><span class='ico-link'></span></a></h1>
+											<h1>Flashads Portal<a href='http://biznethotspot.qeon.co.id/Demo?location_id=Demo' class='popup--link' target='blank_'><span class='ico-link'></span></a></h1>
 											<hr>
-											<p>JUARA 1</p>
+											<p>Front-end Development</p>
 										</div>
 									</div>" class="tooltips__gallery">
-									<img id="img2" src="<?php bloginfo('template_url'); ?>/dist/images/gallery/2.jpg">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/flashads-portal.jpg">
 								</a>																
 							</li>
 							<li class="grid-masonry__item work__content">
-								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/gallery/3.jpg"
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/flashads-compro.jpg"
 									data-caption="
 									<div class='button--info tooltips--work'>
 										<span class='ico-info'></span>
 										<div class='tooltips--work__content'>
-											<h1>Stay Hungry, Stay Foolish <a class='popup--link' href=''><span class='ico-link'></span></a></h1>
+											<h1>Flashads Company Profile<a href='https://flashads.co.id/en' class='popup--link' target='blank_'><span class='ico-link'></span></a></h1>
 											<hr>
-											<p>JUARA 1</p>
+											<p>Front-end Development</p>
 										</div>
 									</div>" class="tooltips__gallery">
-									<img id="img3" src="<?php bloginfo('template_url'); ?>/dist/images/gallery/3.jpg">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/flashads-compro.jpg">
 								</a>																
 							</li>
-							<?php
-							}
-							?>							
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/ccw2017.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Creative City Worship (2017)<a href='http://creativecityworship.com/ccw2017/' class='popup--link' target='blank_'><span class='ico-link'></span></a></h1>
+											<hr>
+											<p>Web Development</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/ccw2017.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/ccw.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Creative City Worship<a href='http://creativecityworship.com' class='popup--link' target='blank_'><span class='ico-link'></span></a></h1>
+											<hr>
+											<p>Web Development</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/ccw.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/uin.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>UIN Company Profile</h1>
+											<hr>
+											<p>Front-end Development</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/uin.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/anjartanjung.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Anjartanjung Company Profile</h1>
+											<hr>
+											<p>Web Development</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/anjartanjung.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/qpocket.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Qpocket Company Profile</h1>
+											<hr>
+											<p>Front-end Development</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/qpocket.jpg">
+								</a>																
+							</li>							
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/ags.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Andalan Global Sarana</h1>
+											<hr>
+											<p>Logo Design</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/ags.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/jms.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Jayadi Mitra Sejahtera</h1>
+											<hr>
+											<p>Logo Design</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/jms.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/sanica.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Sanica</h1>
+											<hr>
+											<p>Logo Design</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/sanica.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/ruangraung.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Ruang-Raung</h1>
+											<hr>
+											<p>Logo Design</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/ruangraung.jpg">
+								</a>																
+							</li>
+							<li class="grid-masonry__item work__content">
+								<a class="grid-masonry__content" href="<?php bloginfo('template_url'); ?>/dist/images/work/agpi.jpg"
+									data-caption="
+									<div class='button--info tooltips--work'>
+										<span class='ico-info'></span>
+										<div class='tooltips--work__content'>
+											<h1>Andalan Global Properti Indonesia</h1>
+											<hr>
+											<p>Logo Design</p>
+										</div>
+									</div>" class="tooltips__gallery">
+									<img src="<?php bloginfo('template_url'); ?>/dist/images/work/thumb/agpi.jpg">
+								</a>																
+							</li>
+													
 						</ul>
 						<div style="clear:both;"></div>
 					</div>
@@ -120,16 +254,17 @@
 			<section class="section" id="contact">
 				<div class="section__content left">
 					<div class="contact">
-						<h3>Contact Info:</h3>
-						<p>
-							<span class="label">Email</span> hanzputro@gmail.com<br>
-							<span class="label">Phone</span> +62 812 90 655 754<br>
-							<span class="label">Address</span> Perumahan Alinda Kencana 1, Blok F2 No 30, RT:007 RW:021,<br>
-							Kaliabang Tengah, Bekasi Utara, 17125, Indonesia. 
-						</p>						
+						<address>
+							<h3>Contact Info:</h3>
+							<p>
+								<span class="label">Email</span> hanzputro@gmail.com<br>
+								<span class="label">Phone</span> +62 812 90 655 754<br>
+								<span class="label">Address</span> Perumahan Alinda Kencana 1, Blok F2 No 30, RT:007 RW:021,<br>
+								Kaliabang Tengah, Bekasi Utara, 17125, Indonesia. 
+							</p>
+						</address>												
 						<hr>
-						<p class="margin0">Lets discuss with me for your project or anythings you want.</p>
-						<br>
+						<p>Lets discuss with me for your project or anything you want.</p>
 						<form action="">
 							<div class="field grid">
 								<input id="name" class="span4" type="text" placeholder="Name">

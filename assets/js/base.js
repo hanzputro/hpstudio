@@ -12,13 +12,14 @@ $(document).ready(function(){
 
     var getHheader = $(".header").height();
     var getWsidemenu = $(".sidemenu").width();
+    $(".main-section #about, .main-section #contact").css("height", heightviewport - getHheader);
     
     // masonry
     var masonry = new Macy({
         container: '.grid-masonry',
         trueOrder: false,
-        waitForImages: false,
-        useOwnImageLoader: false,
+        waitForImages: true,
+        useOwnImageLoader: true,
         debug: false,
         mobileFirst: true,
         columns: 0,

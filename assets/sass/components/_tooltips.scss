@@ -23,7 +23,7 @@
         font-family: calibri;        
         padding:5px 15px;
         margin: 0px 0px 0px -20px;
-        background:rgba(63, 63, 63, 0.5);
+        background:rgba(63, 63, 63, 0.9);
         animation: animate__bottomtop__tooltips 0.3s ease;
         transition:0.3s ease;
         &:after{
@@ -42,9 +42,11 @@
         h1{
             position:relative;
             font-size:24px;
+            font-weight:400 !important;
+            letter-spacing: 0.5px;
             color:#d6d4d4;
             white-space: nowrap;
-            padding: 0 50px 0 0;
+            padding: 0 40px 0 0;
             margin:0;
                 a{
                     position:absolute;
@@ -66,6 +68,8 @@
             // font-size: 20px;
             color:#bbb;
             margin:0;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
     }
     &:hover{
