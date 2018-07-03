@@ -42,17 +42,17 @@
 					<ul class="header-menu__content">
 						<li class="header-menu__list">							
 							<a href="http://codepen.io/hanzputro/" target="_blank" class="ico">
-								<?php include('dist/images/icons/codepen.svg') ?>
+								<?php get_template_part('dist/images/svg/inline', 'codepen.svg'); ?>
 							</a>		
 						</li>
 						<li class="header-menu__list">							
 							<a href="https://github.com/hanzputro" target="_blank" class="ico">
-								<?php include('dist/images/icons/github.svg') ?>
+								<?php get_template_part('dist/images/svg/inline', 'github.svg'); ?>
 							</a>		
 						</li>						
 						<li class="header-menu__list">							
 							<a href="https://www.linkedin.com/in/hanif-putra-bb05465b/" target="_blank" class="ico">
-								<?php include('dist/images/icons/linkedin.svg') ?>
+								<?php get_template_part('dist/images/svg/inline', 'linkedin.svg'); ?>
 							</a>		
 						</li>
 					</ul>

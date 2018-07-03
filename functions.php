@@ -95,6 +95,8 @@ function my_contact_form_generate_response($type, $message){
     }
 }
 
+add_theme_support('category-thumbnails');
+
 //response messages
 $not_human       = "Please, I need human.";
 $missing_content = "Please supply all information.";
