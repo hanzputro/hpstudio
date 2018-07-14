@@ -519,8 +519,6 @@ function gallery_option_type( $option_name, $option, $values ){
 
 		$output .= '<input name="' . esc_attr( $option_name . '[' . $option['id'] . '][input3]['.$counter.']' ) . '" id="' . esc_attr( $option['id'] . '_input3' ) . '" class="of-input fieldinput3"  type="text" placeholder="Extra Input" value="' . esc_attr( $field['input3'][$counter] ) . '" />';
 
-		$output .= '<div style="clear: both;"></div>';
-
 		// date
 		$output .= '<input name="' . esc_attr( $option_name . '[' . $option['id'] . '][date]['.$counter.']' ) . '" id="' . esc_attr( $option['id'] . '_date' ) . '" class="of-input fielddate"  type="text" placeholder="date" value="' . esc_attr( $field['date'][$counter] ) . '" />';
 		// time
@@ -572,12 +570,10 @@ function gallery_option_type( $option_name, $option, $values ){
 
 	$output .= '<input data-rel="' . esc_attr( $option_name . '[' . $option['id'] . '][input3]' ) . '" id="' . esc_attr( $option['id'] . '_input3' ) . '" class="of-input fieldinput3"  type="text" placeholder="Extra Input" value="' . esc_attr( $field['input3'][$counter] ) . '" />';
 
-	$output .= '<div style="clear: both;"></div>';
-
 	// date
-	$output .= '<input data-rel="' . esc_attr( $option_name . '[' . $option['id'] . '][date]' ) . '" id="' . esc_attr( $option['id'] . '_date' ) . '" class="of-input fielddate"  type="text" placeholder="date" value="' . esc_attr( $field['date'][$counter] ) . '" />';
+	$output .= '<input name="' . esc_attr( $option_name . '[' . $option['id'] . '][date]['.$counter.']' ) . '" id="' . esc_attr( $option['id'] . '_date' ) . '" class="of-input fielddate"  type="text" placeholder="date" value="' . esc_attr( $field['date'][$counter] ) . '" />';
 	// time
-	$output .= '<input data-rel="' . esc_attr( $option_name . '[' . $option['id'] . '][time]' ) . '" id="' . esc_attr( $option['id'] . '_time' ) . '" class="of-input fieldtime"  type="text" placeholder="time" value="' . esc_attr( $field['time'][$counter] ) . '" />';
+	$output .= '<input name="' . esc_attr( $option_name . '[' . $option['id'] . '][time]['.$counter.']' ) . '" id="' . esc_attr( $option['id'] . '_time' ) . '" class="of-input fielddate"  type="text" placeholder="time" value="' . esc_attr( $field['time'][$counter] ) . '" />';
 
 	$output .= '<input class="of-input fieldimage" type="hidden" data-rel="' . esc_attr( $option_name . '[' . $option['id'] . '][image]' ) . '" value="' . esc_attr( $field['image'][$counter] ) . '" />';
 	$output .= '<img src="' . esc_attr( $field['image'][$counter] ) . '" >';

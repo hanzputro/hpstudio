@@ -45,9 +45,9 @@ gulp.task('sass', function () {
 */
 gulp.task('js-plugin', function () {
     gulp.src([        
-        // 'assets/js/component/bxslider.js',
-        'assets/js/component/baguetteBox.js'
-        // 'assets/js/component/modernizr.custom.js',
+        'assets/vendor/imagesloaded/imagesloaded.js',
+        'assets/vendor/baguetteBox/baguetteBox.js',
+        'assets/vendor/macy/dist/macy.js'
         // 'assets/js/component/classie.js',
         // 'assets/js/component/masonry.pkgd.min.js',
         // 'assets/js/component/AnimOnScroll.js',        

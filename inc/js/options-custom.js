@@ -69,20 +69,18 @@ jQuery(document).ready(function($) {
 	}
 
 
-    function datetime(){
-        // datetimepciker only date
-        jQuery('.fielddate').datetimepicker({
-            timepicker:false,
-            format:'d/M/Y'
-        });
 
-        // datetimepciker only time
-        jQuery('.fieldtime').datetimepicker({
-            datepicker:false,
-            format:'H:i'
-        });
-    }
-    datetime();
+    // datetimepciker only date
+    jQuery('.fielddate').datetimepicker({
+        timepicker:false,
+        format:'d/m/Y'
+    });
+
+    // datetimepciker only time
+    jQuery('.fieldtime').datetimepicker({
+        datepicker:false,
+        format:'H:i'
+    });
 
 
 	// repeat field
@@ -124,8 +122,6 @@ jQuery(document).ready(function($) {
             $textarea = $group.find('.fieldtextarea');
             $input2 = $group.find('.fieldinput2');
             $input3 = $group.find('.fieldinput3');
-            $date = $group.find('.fielddate');
-            $time = $group.find('.fieldtime');
             $image = $group.find('.fieldimage');
 
             count = $loop.children('.gallery-each').not('.to-copy').length;
@@ -134,19 +130,13 @@ jQuery(document).ready(function($) {
         	textarea_name = $textarea.attr('data-rel');
         	input2_name = $input2.attr('data-rel');
             input3_name = $input3.attr('data-rel');
-            date_name = $date.attr('data-rel');
-            time_name = $time.attr('data-rel');
             image_name = $image.attr('data-rel');
 
         	$input.attr('name', input_name + '[' + ( count - 1 ) + ']');
         	$textarea.attr('name', textarea_name + '[' + ( count - 1 ) + ']');
         	$input2.attr('name', input2_name + '[' + ( count - 1 ) + ']');
             $input3.attr('name', input3_name + '[' + ( count - 1 ) + ']');
-            $date.attr('name', date_name + '[' + ( count - 1 ) + ']');
-            $time.attr('name', time_name + '[' + ( count - 1 ) + ']');
             $image.attr('name', image_name + '[' + ( count - 1 ) + ']');
-
-            datetime();
 
         });
 
@@ -157,37 +147,33 @@ jQuery(document).ready(function($) {
         	var textarea_name = toCopy.find('.fieldtextarea').attr('data-rel');
         	var input2_name = toCopy.find('.fieldinput2').attr('data-rel');
             var input3_name = toCopy.find('.fieldinput3').attr('data-rel');
-            var date_name = toCopy.find('.fielddate').attr('data-rel');
-            var time_name = toCopy.find('.fieldtime').attr('data-rel');
             var image_name = toCopy.find('.fieldimage').attr('data-rel');
 
-            var notCopy = $(this).parents('of-repeat-loop').find('.gallery-each').not('.to-copy');            
+            var notCopy = $(this).parents().find('.gallery-each').not('.to-copy');            
 
-            var eachwrapper = $(this).parents('of-repeat-loop');
+            var eachwrapper = $(this).parents();
             var toeach = $(this).parent().attr('class');
 
-        	var count = $(this).parents('.of-repeat-loop').find('.gallery-each').not('.to-copy, .is-delete').length-1;
+        	var count = $(this).parents().find('.gallery-each').not('.to-copy, .is-delete').length-1;
         	$(this).parent().addClass('is-delete').find('.fieldinput').attr('name', input_name + '[' +count+ ']');
 
         	var i=0;
-            $(this).parents('.of-repeat-loop').find('.gallery-each').not('.to-copy, .is-delete').each(function(){
+            $(this).parents().find('.gallery-each').not('.to-copy, .is-delete').each(function(){
             		$(this).find('.fieldinput').attr('name', input_name + '[' + i + ']');
             		$(this).find('.fieldtextarea').attr('name', textarea_name + '[' + i + ']');
             		$(this).find('.fieldinput2').attr('name', input2_name + '[' + i + ']');
                     $(this).find('.fieldinput3').attr('name', input3_name + '[' + i + ']');
-                    $(this).find('.fielddate').attr('name', date_name + '[' + i + ']');
-                    $(this).find('.fieldtime').attr('name', time_name + '[' + i + ']');
                     $(this).find('.fieldimage').attr('name', image_name + '[' + i + ']');
             		// console.log(this);
             		// console.log(i);
             	i++
             });			
 
-           	if( count > 1 ){
-           	 	$(this).parent('.gallery-each').remove();        		
+           	if( count > 2 ){
+           	 	$(this).parent('.gallery-each').remove();
+        		$('.gallery-remove').remove();
            	}else{
            		$(this).parent('.gallery-each').remove();
-                $('.gallery-remove').remove();
            	}
 
         });

@@ -1,13 +1,13 @@
 <?php
 
-/*
-Theme Name: CCW (Creative City Worship)
-Description: A responsive theme
-Version: 1
+/*!
+Theme Name: HanifPutra
+Description: Website themes
+Version: 2018
 Author: hanzputro (Hanif Putra)
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: ccw, Creative City Worship, wordpress theme
+Tags: Hanif Putra, Front end Developer, Designer, Web Developer, Wordpress Developer, Freelancer, My name hanif putra. Live in bekasi, Indonesia. Iam freelance designer, front-end developer, and web developer. 
 */
 
 /*********************************************************/
@@ -19,14 +19,13 @@ function theme_setup() {
 add_action( 'wp_enqueue_scripts', 'theme_setup' );
 
 function js_setup() {
-   wp_register_script( 'jquery','','');
-   wp_register_script('jquery2', get_template_directory_uri().'/assets/vendor/jquery/jquery-1.11.3.min.js', '', '') ;
-   // wp_register_script('plugins', get_template_directory_uri().'/dist/js/plugins.js', '', '') ;
-   // wp_register_script('base', get_template_directory_uri().'/dist/js/scripts.js', '', '') ;
+    wp_register_script( 'jquery','','');
+    wp_register_script('jquery2', get_template_directory_uri().'/assets/vendor/jquery/jquery-1.11.3.min.js', '', '');
+    // wp_register_script('plugins', get_template_directory_uri().'/dist/js/plugins.js', '', '');
+    // wp_register_script('base', get_template_directory_uri().'/dist/js/base.js', '', '');  
 
-   // wp_enqueue_script( array('jquery', 'jquery2', 'plugins', 'base'));
-   wp_enqueue_script( array('jquery', 'jquery2'));   
-}  
+    wp_enqueue_script( array('jquery', 'jquery2'));   
+}
 add_action('wp_enqueue_scripts', 'js_setup');
 
 /*
@@ -77,7 +76,101 @@ jQuery(document).ready(function() {
 * By Hanzputro
 */
 /*********************************************************/
-/*                 Form Contact Setup                   */
+/*                create excerpt custom                  */
+/*********************************************************/
+class Excerpt {
+
+  // Default length (by WordPress)
+  public static $length = 55;
+
+  // So you can call: my_excerpt('short');
+  public static $types = array(
+      'short' => 25,
+      'regular' => 55,
+      'long' => 100
+    );
+
+  /**
+   * Sets the length for the excerpt,
+   * then it adds the WP filter
+   * And automatically calls the_excerpt();
+   *
+   * @param string $new_length 
+   * @return void
+   * @author Baylor Rae'
+   */
+  public static function length($new_length = 55) {
+    Excerpt::$length = $new_length;
+
+    add_filter('excerpt_length', 'Excerpt::new_length');
+
+    Excerpt::output();
+  }
+
+  // Tells WP the new length
+  public static function new_length() {
+    if( isset(Excerpt::$types[Excerpt::$length]) )
+      return Excerpt::$types[Excerpt::$length];
+    else
+      return Excerpt::$length;
+  }
+
+  // Echoes out the excerpt
+  public static function output() {
+    the_excerpt();
+  }
+
+}
+
+// An alias to the class
+function my_excerpt($length = 55) {
+  Excerpt::length($length);
+}
+
+// change [...] from excerpt
+function new_excerpt_more( $more ) {
+    return '...'; // replace the normal [.....] with a empty string
+ }   
+ add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
+/*********************************************************/
+/*             add featured image on post                */
+/*********************************************************/
+add_theme_support( 'post-thumbnails' );
+
+
+
+/*********************************************************/
+/*                 numeric pagination                    */
+/*********************************************************/
+the_posts_pagination( array( 'mid_size'  => 2 ) ); 
+
+
+
+/*********************************************************/
+/*             category-thumbnails Plugins               */
+/*********************************************************/
+add_theme_support('category-thumbnails');
+
+
+
+// Try change the pre_get_posts filter.
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+              'post', 'page'
+            ));
+    return $query;
+   }
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+
+
+/*********************************************************/
+/*                 Form Contact Setup                    */
 /*********************************************************/
 // response generation function
 $response = "";
@@ -94,8 +187,6 @@ function my_contact_form_generate_response($type, $message){
       $response = "<div class='field info-error'>{$message}</div>";
     }
 }
-
-add_theme_support('category-thumbnails');
 
 //response messages
 $not_human       = "Please, I need human.";

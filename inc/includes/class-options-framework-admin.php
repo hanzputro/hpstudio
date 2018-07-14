@@ -85,7 +85,7 @@ class Options_Framework_Admin {
 		$menu = array(
 
 			// Modes: submenu, menu
-            'mode' => 'submenu',
+            'mode' => 'menu',
 
             // Submenu default settings
             'page_title' => __( 'Theme Options', 'theme-textdomain' ),
@@ -108,23 +108,56 @@ class Options_Framework_Admin {
      *
      * @since 1.7.0
      */
+	// function add_custom_options_page() {
+
+	// 	$menu = $this->menu_settings();
+
+	// 	// If you want a top level menu, see this Gist:
+	// 	// https://gist.github.com/devinsays/884d6abe92857a329d99
+
+	// 	// Code removed because it conflicts with .org theme check.
+
+	// 	$this->options_screen = add_theme_page(
+ //            $menu['page_title'],
+ //            $menu['menu_title'],
+ //            $menu['capability'],
+ //            $menu['menu_slug'],
+ //            array( $this, 'options_page' )
+ //        );
+
+	// }
+
 	function add_custom_options_page() {
 
 		$menu = $this->menu_settings();
 
-		// If you want a top level menu, see this Gist:
-		// https://gist.github.com/devinsays/884d6abe92857a329d99
+	        switch( $menu['mode'] ) {
 
-		// Code removed because it conflicts with .org theme check.
+	            case 'menu':
+	            	// http://codex.wordpress.org/Function_Reference/add_menu_page
+	                $this->options_screen = add_menu_page(
+	                	$menu['page_title'],
+	                	$menu['menu_title'],
+	                	$menu['capability'],
+	                	$menu['menu_slug'],
+	                	array( $this, 'options_page' ),
+	                	$menu['icon_url'],
+	                	$menu['position']
+	                );
+	                break;
 
-		$this->options_screen = add_theme_page(
-            $menu['page_title'],
-            $menu['menu_title'],
-            $menu['capability'],
-            $menu['menu_slug'],
-            array( $this, 'options_page' )
-        );
-
+	            default:
+	            	// http://codex.wordpress.org/Function_Reference/add_submenu_page
+	                $this->options_screen = add_submenu_page(
+	                	$menu['parent_slug'],
+	                	$menu['page_title'],
+	                	$menu['menu_title'],
+	                	$menu['capability'],
+	                	$menu['menu_slug'],
+	                	array( $this, 'options_page' ) );
+	                break;
+	       	}
+	        
 	}
 
 	/**

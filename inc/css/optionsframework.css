@@ -238,6 +238,7 @@
 #optionsframework .section-info{
 	border-top: 5px double #eee;
 	background-color:white;
+	line-height: 18px;
 }
 #optionsframework .section-info h4.heading{
 	font-weight:bold;
